@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Company Login</title>
+<script>
+function check()
+{
+	var id = document.frm.companyid;
+	var password = document.frm.password;
+	if(id.val=="")
+	{
+		alert("Enter your Company ID");
+		id.focus();
+		id.select();
+		return false;
+	}
+	else if(password.val=="")
+	{
+		alert("Enter your Password");
+		password.focus();
+		password.select();
+		return false;
+	}
+}
+</script>
+</head>
+<body background="CompanyLogo/companyback.jpg" style="background-size:1366px 720px">
+<form action="CompanyLogin" method="get" name="frm" onsubmit="return check()">
+<h1 style="color:#D40B00;text-align:center;font-size:500%">Company <br> Log IN</h1>
+
+<center>
+<input type="text" name="companyid" placeholder="Enter Company ID"><br><br>
+<input type="password" name="password" placeholder="Enter Password"><br><br>
+<input type="submit" value="Log IN"><br><br>
+<a href="companySignup.html"><h3 style="color:red;font-size:40px;text-align:center;">Sign Up your Company</h3></a>
+</center>
+</form>
+</body>
+</html>

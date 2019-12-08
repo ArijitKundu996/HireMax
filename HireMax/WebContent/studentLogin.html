@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Student Login</title>
+<script>
+function check()
+{
+	var roll = document.frm.rollno;
+	var password = document.frm.password;
+	if(roll.val=="")
+	{
+		alert("Enter your Roll No");
+		roll.focus();
+		roll.select();
+		return false;
+	}
+	else if(password.val=="")
+	{
+		alert("Enter your Password");
+		password.focus();
+		password.select();
+		return false;
+	}
+}
+</script>
+</head>
+
+<body background="Student/studentlogin.jpg" style="background-size:1366px 720px">
+<form action="StudentLogin" method="get" name="frm" onsubmit="return check()">
+<h1 style="color:#D40B00;text-align:center;font-size:500%"> Student <br>Log IN</h1>
+
+<center>
+<input type="text" name="rollno" placeholder="Enter Roll No"><br><br>
+<input type="password" name="password" placeholder="Enter Password"><br><br>
+<input type="submit" value="Log IN"><br><br>
+<a href="studentSignup.html"><h3 style="color:#D40B00;font-size:40px;text-align:center;">Register yourself</h3></a>
+</center>
+</form>
+</body>
+</html>
