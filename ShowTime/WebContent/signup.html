@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sign UP</title>
+<script>
+function check()
+{
+	var name = document.frm.fn;
+	var email = document.frm.email;
+	var mob = document.frm.mob;
+	var password = document.frm.password;
+	var ques = document.frm.question;
+	var ans = document.frm.ans;
+	if(name.value=="")
+	{
+		alert("Please enter name");
+		name.focus();
+		return false;
+	}
+	if(email.value=="")
+	{
+		alert("Please enter email");
+		email.focus();
+		return false;
+	}
+	if(mob.value=="")
+	{
+		alert("Please enter number");
+		mob.focus();
+		return false;
+	}
+	if(isNaN(mob.value))
+	{
+		alert("Number must be numeric");
+		mob.focus();
+		mob.select();
+		return false;
+	}
+	if(mob.value.length!=10)
+	{
+		alert("Please enter 10 digit number");
+		mob.focus();
+		mob.select();
+		return false;
+	}
+	if(password.value=="")
+	{
+		alert("Please enter password");
+		password.focus();
+		return false;
+	}
+	if(password.value.length<5)
+	{
+		alert("Password must be of atleast 5 characters");
+		password.focus();
+		password.select();
+		return false;
+	}
+	/* if(ques.value="")
+	{
+		alert("Please select a question");
+		ques.focus();
+		return false;
+	} */
+	if(ans.value=="")
+	{
+		alert("Please answer your question");
+		ans.focus();
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+<body background="pictures/signup.jpg" style="background-size: 1366px 720px;background-repeat: no-repeat;">
+<form action="SignUp" name="frm" onsubmit="return check()">
+<h2 style="text-align:center;color:#F908B1;font-size: 300%;"><i>Create your Account</i></h2>
+<table align="center">
+<tr>
+	<td><span style="color: #FFFFFF;font-size: 150%;">Enter Name : </span></td>
+	<td><input type="text" name="fn" placeholder="Enter first name"></td>
+</tr>
+<tr>
+	<td><span style="color: #FFFFFF;font-size: 150%;">Enter Email ID : </span></td>
+	<td><input type="text" name="email" placeholder="Enter valid email id"></td>
+</tr>
+<tr>
+	<td><span style="color: #FFFFFF;font-size: 150%;">Enter Contact No. : </span></td>
+	<td><input type="text" name="mob" placeholder="Enter 10 digit moblie no."></td>
+</tr>
+<tr>
+	<td><span style="color: #FFFFFF;font-size: 150%;">Enter Password : </span></td>
+	<td><input type="password" name="password" placeholder="Atleast 5 characters"></td>
+</tr>
+</table>
+<pre style="text-align: center;color:#FFFFFF;font-size: 150%;">Recovery Question : </pre>
+<p style="text-align: center;"><select name="question">
+<option>Choose your appropriate question</option>
+<option>What is the name of your pet?</option>
+<option>Which is your favourite IPL team?</option>
+<option>What is your favourite dish?</option>
+<option>Which movie did you recently watch?</option>
+<option>What is your favourite brand?</option> 
+</select><br></p>
+<pre style="color:#FFFFFF;font-size: 150%;text-align: center;">Answer : </pre>
+<pre style="color:#FFFFFF;font-size: 150%;text-align: center"><textarea rows="7" cols="50" name="ans" placeholder="Use as few words as possible"></textarea></pre><br>
+<pre style="text-align: center;"><input type="submit" value="SIGN UP"></pre>
+</form>
+</body>
+</html>

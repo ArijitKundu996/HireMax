@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Time Slots</title>
+<script>
+var blink_speed = 500; 
+var t = setInterval(function () 
+		{ var ele = document.getElementById('blinker'); 
+		ele.style.visibility = (ele.style.visibility == 'hidden' ? '' : 'hidden'); }, blink_speed);
+var t = setInterval(function () 
+		{ var ele = document.getElementById('blinker2'); 
+		ele.style.visibility = (ele.style.visibility == 'hidden' ? '' : 'hidden'); }, blink_speed);
+</script>
+</head>
+<body bgcolor="silver">
+<center><img src="pictures/time.png" height="200px" width="600px"></center><br>
+<table border="3" height="100px" width="600px" align="center">
+	<tr>
+		<th>Show Name</th>
+		<th>Show Timings</th>
+	</tr>
+	<tr>
+		<td>Noon <span id="blinker" style="color: red;">(Housefull)</span></td>
+		<td>12:00 - 3:00 PM</td>
+	</tr>
+	<tr>
+		<td>Matinee <span id="blinker2" style="color:red;">(Housefull)</span></td>
+		<td>4:00 - 7:00 PM</td>
+	</tr>
+	<tr>
+		<td>Night</td>
+		<td>8:00 - 11:00 PM</td>
+	</tr>
+</table>
+</body>
+</html>
